@@ -237,19 +237,16 @@ nav {
   background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(40.7742px);
   width: 52rem;
-  height: 100%;
-  position: relative; }
-  nav:before {
-    content: "";
-    position: absolute;
-    width: calc(50vw - 50%);
-    height: 1px;
-    left: calc(-50vw - -55%);
-    top: 48px;
-    background: #FFFFFF;
-    mix-blend-mode: normal;
-    opacity: 0.25;
-    z-index: 5; }
+  height: 100%; }
+  nav .nav-menu {
+    height: 21px;
+    width: 24px;
+    margin-right: 50px;
+    transition: 0.2s background ease; }
+    nav .nav-menu-close {
+      background: url("../assets/shared/icon-close.svg") no-repeat; }
+    nav .nav-menu-open {
+      background: url("../assets/shared/icon-hamburger.svg") no-repeat; }
   nav ul {
     display: -webkit-box;
     display: -moz-box;

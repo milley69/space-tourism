@@ -1,7 +1,125 @@
+@import "mixin/flex"
+@media screen and (min-width: 769px)
+  nav
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      width: calc(50vw - 50%)
+      height: 1px
+      left: calc(-50vw - -55%)
+      top: 48px
+      background: #FFFFFF
+      mix-blend-mode: normal
+      opacity: 0.25
+      z-index: 5
+@media screen and (max-width: 1000px)
+  nav
+    width: 40rem
+    ul
+      padding-left: 60px
 @media screen and (max-width: 768px)
   body
     background: url("../assets/home/background-home-tablet.jpg") no-repeat
     background-size: cover
+  header
+    margin-top: 0
+  nav
+    width: 28rem
+    ul
+      padding-left: 48px
+      li
+        margin-right: 37px
+        a
+          font-size: 0.9rem
+          line-height: 17px
+          letter-spacing: 2.3625px
+          span
+            display: none
+@media screen and (max-width: 556px)
+  nav
+    background: none
+    backdrop-filter: none
+    width: 254px
+    @include flexbox()
+    justify-content: flex-end
+    align-items: center
+    position: relative
+    .nav-menu
+      z-index: 10
+      display: block
+    .active-nav
+      &:after
+        display: none
+    ul
+      background: rgba(255, 255, 255, 0.04)
+      backdrop-filter: blur(40.7742px)
+      position: absolute
+      height: 100vh
+      padding-left: 32px
+      padding-top: 118px
+      top: 0
+      right: 0
+      //right: -300px
+      display: none
+      flex-direction: column
+      align-items: flex-start
+      transform: translateX(0)
+      -webkit-animation: nav-open 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+      animation: nav-open 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+      &.nav-open
+        //right: -100px
+        display: inherit
+      &.nav-open-fade
+        -webkit-animation: nav-open-fade 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+        animation: nav-open-fade 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+      li
+        margin-right: 0
+        margin-bottom: 32px
+        a
+          &:after
+            display: none
+          span
+            display: inline
+  @-webkit-keyframes nav-open
+    0%
+      -webkit-transform: translateX(300px)
+      transform: translateX(300px)
+
+    100%
+      -webkit-transform: translateX(0)
+      transform: translateX(0)
+
+
+  @keyframes nav-open
+    0%
+      -webkit-transform: translateX(300px)
+      transform: translateX(300px)
+
+    100%
+      -webkit-transform: translateX(0)
+      transform: translateX(0)
+
+  @-webkit-keyframes nav-open-fade
+    0%
+      -webkit-transform: translateX(0)
+      transform: translateX(0)
+
+    100%
+      -webkit-transform: translateX(300px)
+      transform: translateX(300px)
+
+
+  @keyframes nav-open-fade
+    0%
+      -webkit-transform: translateX(0)
+      transform: translateX(0)
+
+    100%
+      -webkit-transform: translateX(300px)
+      transform: translateX(300px)
+
+
 @media screen and (max-width: 375px)
   body
     background: url("../assets/home/background-home-mobile.jpg") no-repeat

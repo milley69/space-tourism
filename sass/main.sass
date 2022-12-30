@@ -29,18 +29,16 @@ nav
   backdrop-filter: blur(40.7742px)
   width: 52rem
   height: 100%
-  position: relative
-  &:before
-    content: ''
-    position: absolute
-    width: calc(50vw - 50%)
-    height: 1px
-    left: calc(-50vw - -55%)
-    top: 48px
-    background: #FFFFFF
-    mix-blend-mode: normal
-    opacity: 0.25
-    z-index: 5
+  .nav-menu
+    //display: none
+    height: 21px
+    width: 24px
+    margin-right: 50px
+    transition: .2s background ease
+    &-close
+      background: url("../assets/shared/icon-close.svg") no-repeat
+    &-open
+      background: url("../assets/shared/icon-hamburger.svg") no-repeat
   ul
     @include flexbox
     height: 100%
