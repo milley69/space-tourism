@@ -1,4 +1,6 @@
+@import 'variables'
 @import "style"
+
 
 *,*:after,*:before
   margin: 0
@@ -16,6 +18,8 @@ body
   width: 100%
 
   font-weight: 400
+  @include flexbox()
+  flex-direction: column
 header
   padding-left: 50px
   margin-top: 40px
@@ -26,11 +30,12 @@ header
   align-items: center
 nav
   background: rgba(255, 255, 255, 0.04)
+  -webkit-backdrop-filter: blur(40.7742px)
   backdrop-filter: blur(40.7742px)
   width: 52rem
   height: 100%
   .nav-menu
-    //display: none
+    display: none
     height: 21px
     width: 24px
     margin-right: 50px
@@ -60,8 +65,20 @@ nav
         width: 100%
         height: 3px
         background: $white
-        transition: width .3s ease
         z-index: 2
+        -webkit-animation: active-nav 0.6s ease-in both
+        animation: active-nav .3s ease
+      @-webkit-keyframes active-nav 
+        from
+          width: 0
+        to
+          width: 100%
+      @keyframes active-nav 
+        from
+          width: 0
+        to
+          width: 100%
+
     li
       a
         text-decoration: none
@@ -86,3 +103,81 @@ nav
         span
           font-weight: 700
           margin-right: 14px
+
+main
+  @include flexbox()
+  @include flex(1)
+  align-items: center
+  justify-content: space-around
+  .home_title
+    @include flex(0)
+    
+    -webkit-animation: focus-home .8s cubic-bezier(0.550, 0.085, 0.680, 0.530) both
+    animation: focus-home .8s cubic-bezier(0.550, 0.085, 0.680, 0.530) both
+    h4
+      font-family: $Bar
+      font-size: 1.75rem
+      line-height: 34px
+      letter-spacing: 4.725px
+      color: $sky
+      text-transform: uppercase
+    h1
+      font-family: $bell
+      font-size: 9.375rem
+      line-height: 172px
+      color: #FFFFFF
+      margin: 0
+      font-weight: 400
+      text-transform: uppercase
+      margin-top: 24px
+      margin-bottom: 24px
+    p
+    font-family: $Bar
+    font-weight: 400
+    font-size: 1.125rem
+    line-height: 32px
+    color: $sky
+  .home_explore
+    -webkit-animation: focus-home .8s cubic-bezier(0.550, 0.085, 0.680, 0.530) both
+    animation: focus-home .8s cubic-bezier(0.550, 0.085, 0.680, 0.530) both
+    a
+      @include flexbox()
+      align-items: center
+      justify-content: center
+      font-family: $bell
+      font-size: 32px
+      letter-spacing: 2px
+      color: $dark
+      text-transform: uppercase
+      text-decoration: none
+      background: $white
+      height: 274px
+      width: 274px
+      border-radius: 50%
+      position: relative
+      transition: box-shadow .4s ease-in-out
+      &:hover
+        -webkit-box-shadow: 0px 0px 0px 75px rgba(255, 255, 255, 0.1)
+        -moz-box-shadow: 0px 0px 0px 75px rgba(255, 255, 255, 0.1)
+        box-shadow: 0px 0px 0px 75px rgba(255, 255, 255, 0.1)
+       
+@keyframes focus-home 
+  0% 
+    -webkit-filter: blur(12px)
+    filter: blur(12px)
+    opacity: 0
+  100% 
+    -webkit-filter: blur(0px)
+    filter: blur(0px)
+    opacity: 1
+@-webkit-keyframes text-focus-in 
+  0% 
+    -webkit-filter: blur(12px)
+    filter: blur(12px)
+    opacity: 0
+  100% 
+    -webkit-filter: blur(0px)
+    filter: blur(0px)
+    opacity: 1
+
+

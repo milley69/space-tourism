@@ -36,9 +36,37 @@
           letter-spacing: 2.3625px
           span
             display: none
+  main
+    flex-direction: column
+    .home_title
+      max-width: min-content
+      text-align: center
+      h4
+        font-size: 1.25rem
+        line-height: 24px
+        letter-spacing: 3.375px
+      h1
+        line-height: 9.375rem
+      p
+        line-height: 1.75rem
+        font-size: 1rem
+@media screen and (max-width: 444px) 
+  main
+    .home_title
+      h4
+        font-size: 1.25rem
+        line-height: 24px
+        letter-spacing: 3.375px
+      h1
+        font-size: 7.375rem
+      p
+        line-height: 1.75rem
+        font-size: 1rem
+
 @media screen and (max-width: 556px)
   nav
     background: none
+    -webkit-backdrop-filter: none
     backdrop-filter: none
     width: 254px
     @include flexbox()
@@ -53,6 +81,7 @@
         display: none
     ul
       background: rgba(255, 255, 255, 0.04)
+      -webkit-backdrop-filter: blur(40.7742px)
       backdrop-filter: blur(40.7742px)
       position: absolute
       height: 100vh
@@ -67,6 +96,7 @@
       transform: translateX(0)
       -webkit-animation: nav-open 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
       animation: nav-open 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+      z-index: 1
       &.nav-open
         //right: -100px
         display: inherit
@@ -124,3 +154,21 @@
   body
     background: url("../assets/home/background-home-mobile.jpg") no-repeat
     background-size: cover
+  header
+    padding-left: 24px
+  main
+    .home_title
+      max-width: none
+      h4
+        font-size: 1rem
+        line-height: 19px
+        letter-spacing: 2.7px
+      h1
+        font-size: 5rem
+        line-height: 6.25rem
+        margin-top: 16px
+        margin-bottom: 16px
+      p
+        line-height: 1.5625rem
+        font-size: .9375rem
+        padding: 0 24px

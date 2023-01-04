@@ -1,0 +1,200 @@
+@media screen and (min-width: 769px) {
+		nav {
+				position: relative;
+		}
+		nav:before {
+				content: "";
+				position: absolute;
+				width: calc(50vw - 50%);
+				height: 1px;
+				left: calc(-50vw + 55%);
+				top: 48px;
+				background: #FFFFFF;
+				mix-blend-mode: normal;
+				opacity: 0.25;
+				z-index: 5;
+		}
+}
+@media screen and (max-width: 1000px) {
+		nav {
+				width: 40rem;
+		}
+		nav ul {
+				padding-left: 60px;
+		}
+}
+@media screen and (max-width: 768px) {
+		body {
+				background: url("../assets/home/background-home-tablet.jpg") no-repeat;
+				background-size: cover;
+		}
+		header {
+				margin-top: 0;
+		}
+		nav {
+				width: 28rem;
+		}
+		nav ul {
+				padding-left: 48px;
+		}
+		nav ul li {
+				margin-right: 37px;
+		}
+		nav ul li a {
+				font-size: 0.9rem;
+				line-height: 17px;
+				letter-spacing: 2.3625px;
+		}
+		nav ul li a span {
+				display: none;
+		}
+		main {
+				flex-direction: column;
+		}
+		main .home_title {
+				max-width: -webkit-min-content;
+				max-width: -moz-min-content;
+				max-width: min-content;
+				text-align: center;
+		}
+		main .home_title h4 {
+				font-size: 1.25rem;
+				line-height: 24px;
+				letter-spacing: 3.375px;
+		}
+		main .home_title h1 {
+				line-height: 9.375rem;
+		}
+		main .home_title p {
+				line-height: 1.75rem;
+				font-size: 1rem;
+		}
+}
+@media screen and (max-width: 444px) {
+		main .home_title h4 {
+				font-size: 1.25rem;
+				line-height: 24px;
+				letter-spacing: 3.375px;
+		}
+		main .home_title h1 {
+				font-size: 7.375rem;
+		}
+		main .home_title p {
+				line-height: 1.75rem;
+				font-size: 1rem;
+		}
+}
+@media screen and (max-width: 556px) {
+		nav {
+				background: none;
+				-webkit-backdrop-filter: none;
+				backdrop-filter: none;
+				width: 254px;
+				display: flex;
+				justify-content: flex-end;
+				align-items: center;
+				position: relative;
+		}
+		nav .nav-menu {
+				z-index: 10;
+				display: block;
+		}
+		nav .active-nav:after {
+				display: none;
+		}
+		nav ul {
+				background: rgba(255, 255, 255, 0.04);
+				-webkit-backdrop-filter: blur(40.7742px);
+				backdrop-filter: blur(40.7742px);
+				position: absolute;
+				height: 100vh;
+				padding-left: 32px;
+				padding-top: 118px;
+				top: 0;
+				right: 0;
+				display: none;
+				flex-direction: column;
+				align-items: flex-start;
+				transform: translateX(0);
+				-webkit-animation: nav-open 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+				animation: nav-open 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+				z-index: 1;
+		}
+		nav ul.nav-open {
+				display: inherit;
+		}
+		nav ul.nav-open-fade {
+				-webkit-animation: nav-open-fade 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+				animation: nav-open-fade 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+		}
+		nav ul li {
+				margin-right: 0;
+				margin-bottom: 32px;
+		}
+		nav ul li a:after {
+				display: none;
+		}
+		nav ul li a span {
+				display: inline;
+		}
+		@-webkit-keyframes nav-open {
+				0% {
+						transform: translateX(300px);
+				}
+				100% {
+						transform: translateX(0);
+				}
+		}
+		@keyframes nav-open {
+				0% {
+						transform: translateX(300px);
+				}
+				100% {
+						transform: translateX(0);
+				}
+		}
+		@-webkit-keyframes nav-open-fade {
+				0% {
+						transform: translateX(0);
+				}
+				100% {
+						transform: translateX(300px);
+				}
+		}
+		@keyframes nav-open-fade {
+				0% {
+						transform: translateX(0);
+				}
+				100% {
+						transform: translateX(300px);
+				}
+		}
+}
+@media screen and (max-width: 375px) {
+		body {
+				background: url("../assets/home/background-home-mobile.jpg") no-repeat;
+				background-size: cover;
+		}
+		header {
+				padding-left: 24px;
+		}
+		main .home_title {
+				max-width: none;
+		}
+		main .home_title h4 {
+				font-size: 1rem;
+				line-height: 19px;
+				letter-spacing: 2.7px;
+		}
+		main .home_title h1 {
+				font-size: 5rem;
+				line-height: 6.25rem;
+				margin-top: 16px;
+				margin-bottom: 16px;
+		}
+		main .home_title p {
+				line-height: 1.5625rem;
+				font-size: 0.9375rem;
+				padding: 0 24px;
+		}
+}/*# sourceMappingURL=main-media.css.map */
