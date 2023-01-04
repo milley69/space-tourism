@@ -1,0 +1,14 @@
+*.sketch
+*.fig
+*.xd
+.DS_Store
+.prettierignore
+### Sass ###
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
+
+.htmlQ
+data.json
+qwe.html
