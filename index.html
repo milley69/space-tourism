@@ -16,7 +16,6 @@
       <img src="assets/shared/logo.svg" alt="logo" />
       <nav>
         <a class="nav-menu nav-menu-open" href="#"></a>
-        <!--    <ul class="nav-open nav-open-fade">-->
         <ul>
           <li class="active-nav">
             <a href="#home"><span>00</span>home</a>
@@ -33,7 +32,7 @@
         </ul>
       </nav>
     </header>
-    <main class="container">
+    <main class="container disabledQ" id="home">
       <div class="home_title">
         <h4>so, you want to travel to</h4>
         <h1>space</h1>
@@ -48,6 +47,43 @@
         <a href="#destination">explore</a>
       </div>
     </main>
+    <section id="destination">
+      <h1><span>01</span>Pick your destination</h1>
+      <div class="destination_planet">
+        <img src="./assets/destination/image-moon.webp" alt="moon" />
+      </div>
+      <div class="destination_title">
+        <div class="destination_tab">
+          <ul class="tabs">
+            <li class="tab"><a href="#moon">moon</a></li>
+            <li class="tab"><a href="#mars">mars</a></li>
+            <li class="tab"><a href="#europa">europa</a></li>
+            <li class="tab"><a href="#titan">titan</a></li>
+          </ul>
+          <div id="moon">
+            <h1>moon</h1>
+            <p>
+              See our planet as you’ve never seen it before. A perfect relaxing
+              trip away to help regain perspective and come back refreshed.
+              While you’re there, take in some history by visiting the Luna 2
+              and Apollo 11 landing sites.
+            </p>
+            <hr />
+            <table>
+              <caption></caption>
+              <tr>
+                <th>avg. distance</th>
+                <th>Est. travel time</th>
+              </tr>
+              <tr>
+                <td>384,400 km</td>
+                <td>3 days</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
     <script src="js/main.js"></script>
   </body>
 </html>

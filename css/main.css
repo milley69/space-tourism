@@ -263,6 +263,10 @@ html {
 		font-size: 16px;
 }
 
+.disabledQ {
+		display: none;
+}
+
 body {
 		background: url("../assets/home/background-home-desktop.jpg") no-repeat;
 		background-size: cover;
