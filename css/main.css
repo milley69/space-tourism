@@ -470,4 +470,171 @@ main .home_explore a:hover {
 				filter: blur(0px);
 				opacity: 1;
 		}
+}
+#destination::before {
+		content: "";
+		background: url("../assets/destination/background-destination-desktop.jpg") no-repeat;
+		background-size: cover;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+}
+
+#destination {
+		display: flex;
+		flex-direction: column;
+		width: 1110px;
+		height: 100%;
+		margin: 70px auto 0;
+}
+#destination .destination_pick {
+		font-family: "Barlow Condensed", sans-serif;
+		font-size: 1.75rem;
+		letter-spacing: 4.725px;
+		text-transform: uppercase;
+		color: #fff;
+		font-weight: 400;
+		margin-bottom: 4rem;
+}
+#destination .destination_pick span {
+		font-weight: 700;
+		line-height: 34px;
+		opacity: 0.25;
+		margin-right: 28px;
+}
+#destination .destination_about {
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
+		height: 70%;
+}
+#destination .destination_about .destination_planet {
+		text-align: right;
+}
+#destination .destination_about .destination_planet img {
+		width: 100%;
+		height: auto;
+}
+#destination .destination_about .destination_title {
+		width: 445px;
+}
+#destination .destination_about .destination_title .destination_tab ul {
+		display: flex;
+		height: 100%;
+		width: 100%;
+		padding: 0;
+}
+#destination .destination_about .destination_title .destination_tab ul li {
+		list-style: none;
+		margin-right: 35px;
+}
+#destination .destination_about .destination_title .destination_tab ul li:last-child {
+		margin-right: 0;
+}
+#destination .destination_about .destination_title .destination_tab ul .active-tab {
+		position: relative;
+}
+#destination .destination_about .destination_title .destination_tab ul .active-tab:after {
+		content: "";
+		position: absolute;
+		bottom: -12px;
+		left: 0;
+		width: 100%;
+		height: 3px;
+		background: #fff;
+		z-index: 2;
+		-webkit-animation: active-tab 0.6s ease-in both;
+		animation: active-tab 0.3s ease;
+}
+@-webkit-keyframes active-tab {
+		from {
+				width: 0;
+		}
+		to {
+				width: 100%;
+		}
+}
+@keyframes active-tab {
+		from {
+				width: 0;
+		}
+		to {
+				width: 100%;
+		}
+}
+#destination .destination_about .destination_title .destination_tab ul li a {
+		text-decoration: none;
+		color: #fff;
+		font-size: 1rem;
+		font-family: "Barlow Condensed", sans-serif;
+		font-weight: 400;
+		letter-spacing: 2.7px;
+		text-transform: uppercase;
+		position: relative;
+}
+#destination .destination_about .destination_title .destination_tab ul li a:after {
+		content: "";
+		position: absolute;
+		bottom: -14px;
+		left: 0;
+		width: 100%;
+		height: 0;
+		background: #fff;
+		opacity: 0.5;
+		transition: height 0.1s ease;
+}
+#destination .destination_about .destination_title .destination_tab ul li a:hover:after {
+		height: 3px;
+}
+#destination .destination_about .destination_title .destination_tab ul li a span {
+		font-weight: 700;
+		margin-right: 14px;
+}
+#destination .planet_info h1 {
+		font-family: "Bellefair", serif;
+		font-size: 6.25rem;
+		line-height: 115px;
+		font-weight: 400;
+		color: #fff;
+		text-transform: uppercase;
+		margin: 37px 0 14px;
+}
+#destination .planet_info p {
+		font-family: "Barlow Condensed", sans-serif;
+		font-weight: 400;
+		font-size: 1.125rem;
+		line-height: 2rem;
+		color: #D0D6F9;
+		margin-bottom: 54px;
+}
+#destination .planet_info hr {
+		border: 1px solid #383B4B;
+}
+#destination .planet_info table {
+		margin-top: 28px;
+}
+#destination .planet_info table th {
+		text-transform: uppercase;
+		font-weight: 400;
+		font-family: "Barlow Condensed", sans-serif;
+		font-size: 14px;
+		letter-spacing: 2.3625px;
+		color: #D0D6F9;
+		text-align: left;
+		padding: 0;
+		padding-bottom: 12px;
+}
+#destination .planet_info table td {
+		text-transform: uppercase;
+		font-weight: 400;
+		font-family: "Bellefair", serif;
+		font-size: 28px;
+		line-height: 2rem;
+		color: #fff;
+}
+#destination .planet_info table td:first-child {
+		padding-right: 70px;
 }/*# sourceMappingURL=main.css.map */

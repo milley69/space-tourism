@@ -18,16 +18,16 @@
         <a class="nav-menu nav-menu-open" href="#"></a>
         <ul>
           <li class="active-nav">
-            <a href="#home"><span>00</span>home</a>
+            <a href="index.html"><span>00</span>home</a>
           </li>
           <li>
-            <a href="#destination"><span>01</span>destination</a>
+            <a href="destination.html"><span>01</span>destination</a>
           </li>
           <li>
-            <a href="#crew"><span>03</span>crew</a>
+            <a href="crew.html"><span>03</span>crew</a>
           </li>
           <li>
-            <a href="#technology"><span>04</span>technology</a>
+            <a href="technology.html"><span>04</span>technology</a>
           </li>
         </ul>
       </nav>
@@ -48,42 +48,46 @@
       </div>
     </main>
     <section id="destination">
-      <h1><span>01</span>Pick your destination</h1>
-      <div class="destination_planet">
-        <img src="./assets/destination/image-moon.webp" alt="moon" />
-      </div>
-      <div class="destination_title">
-        <div class="destination_tab">
-          <ul class="tabs">
-            <li class="tab"><a href="#moon">moon</a></li>
-            <li class="tab"><a href="#mars">mars</a></li>
-            <li class="tab"><a href="#europa">europa</a></li>
-            <li class="tab"><a href="#titan">titan</a></li>
-          </ul>
-          <div id="moon">
-            <h1>moon</h1>
-            <p>
-              See our planet as you’ve never seen it before. A perfect relaxing
-              trip away to help regain perspective and come back refreshed.
-              While you’re there, take in some history by visiting the Luna 2
-              and Apollo 11 landing sites.
-            </p>
-            <hr />
-            <table>
-              <caption></caption>
-              <tr>
-                <th>avg. distance</th>
-                <th>Est. travel time</th>
-              </tr>
-              <tr>
-                <td>384,400 km</td>
-                <td>3 days</td>
-              </tr>
-            </table>
+      <h1 class="destination_pick"><span>01</span>Pick your destination</h1>
+      <div class="destination_about">
+        <div class="destination_planet">
+          <img src="./assets/destination/image-moon.webp" alt="moon" />
+        </div>
+        <div class="destination_title">
+          <div class="destination_tab">
+            <ul>
+              <li class="active-tab"><a href="#moon">moon</a></li>
+              <li><a href="#mars">mars</a></li>
+              <li><a href="#europa">europa</a></li>
+              <li><a href="#titan">titan</a></li>
+            </ul>
+            <div id="moon" class="planet_info">
+              <h1>moon</h1>
+              <p>
+                See our planet as you’ve never seen it before. A perfect
+                relaxing trip away to help regain perspective and come back
+                refreshed. While you’re there, take in some history by visiting
+                the Luna 2 and Apollo 11 landing sites.
+              </p>
+              <hr />
+              <table>
+                <caption></caption>
+                <tr>
+                  <th>avg. distance</th>
+                  <th>Est. travel time</th>
+                </tr>
+                <tr>
+                  <td>384,400 km</td>
+                  <td>3 days</td>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
       </div>
     </section>
+    <script src="js/homeNav.js"></script>
+    <script src="js/destin.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
