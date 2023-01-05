@@ -4,12 +4,12 @@
 In short, I accepted a challenge from [Frontend Mentor](https://www.frontendmentor.io)...
 
 
-![Logo](assets/favicon.svg)
+![Logo](./assets/favicon.svg)
 
 
 ## Screenshots
 
-![App Screenshot](./htmlQ/preview.jpg)
+![App Screenshot](./assets/preview.jpg)
 
 
 ## Typography
