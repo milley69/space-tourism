@@ -569,10 +569,6 @@ main p {
 #destination .destination_main {
 		margin-top: 26px;
 }
-#destination .destination_tabs {
-		-webkit-animation: none;
-		        animation: none;
-}
 #destination .destination_tabs ul {
 		list-style: none;
 		padding: 0;
@@ -664,6 +660,10 @@ main p {
 		text-transform: uppercase;
 		color: #fff;
 		margin-bottom: 32px;
+}
+#destination .planet_animation {
+		-webkit-animation: text-focus-in 0.6s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+		        animation: text-focus-in 0.6s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 #destination .planet_animation h1 {
 		-webkit-animation: text-focus-in 0.7s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;

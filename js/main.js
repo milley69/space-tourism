@@ -81,7 +81,20 @@ function updateDestination(destinationUlLi) {
     1100
   )
 }
-
+function destinationTabsOne() {
+  let destinationTabs = document.querySelector('.destination_tabs')
+  let destinationPlanet = document.querySelector('.destination_planet')
+  let moon = document.querySelector('#moon')
+  destinationPlanet.classList.toggle('destination_planet_animation')
+  destinationTabs.classList.add('planet_animation')
+  moon.classList.toggle('planet_animation')
+  // setTimeout(() => destinationTabs.classList.remove('planet_animation'), 600)
+  setTimeout(() => moon.classList.toggle('planet_animation'), 1000)
+  setTimeout(
+    () => destinationPlanet.classList.toggle('destination_planet_animation'),
+    1100
+  )
+}
 function destinationTabs() {
   let destinationUlLi = Array.from(
     document.querySelectorAll('.destination_tabs ul li')
@@ -236,6 +249,7 @@ function updateNav() {
   } else if (navUlLi[1].classList.contains('nav-active')) {
     nav.nextElementSibling.remove()
     nav.insertAdjacentHTML('afterend', destination)
+    destinationTabsOne()
     destinationTabs()
   } else if (navUlLi[2].classList.contains('nav-active')) {
     nav.nextElementSibling.remove()
