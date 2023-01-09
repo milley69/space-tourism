@@ -96,12 +96,16 @@ function destinationTabs() {
     })
   })
 }
-destinationTabs()
-// destinationUlLi.map((li) => {
-//   li.addEventListener('click', () => {
-//     updateDestination()
-//   })
-// })
+function exploreBtn() {
+  let exploreBtn = document.querySelector('.main-exp a')
+  exploreBtn.addEventListener('click', () => {
+    for (const li of navUlLi) {
+      li.classList.remove('nav-active')
+    }
+    navUlLi[1].classList.add('nav-active')
+    updateNav()
+  })
+}
 
 let nav = document.querySelector('nav')
 
@@ -126,14 +130,14 @@ let destination = `
 <section id="destination">
       <h4><span>01</span>Pick your destination</h4>
       <div class="destination_planets">
-        <div class="destination_planet moon"></div>
+        <div class="destination_planet" data-planet="moon"></div>
         <div class="destination_main">
           <div class="destination_tabs">
             <ul>
-              <li class="moon tab_active">moon</li>
-              <li class="mars">mars</li>
-              <li class="europa">europa</li>
-              <li class="titan">titan</li>
+              <li class="tab_active">moon</li>
+              <li>mars</li>
+              <li>europa</li>
+              <li>titan</li>
             </ul>
           </div>
           <div id="moon" class="">
@@ -222,7 +226,8 @@ let destinationHTML = document.querySelector('#destination')
 let crewHTML = document.querySelector('#crew')
 let technologyHTML = document.querySelector('#technology')
 
-// nav.insertAdjacentHTML('afterend', home)
+nav.insertAdjacentHTML('afterend', home)
+exploreBtn()
 
 function updateNav() {
   if (navUlLi[0].classList.contains('nav-active')) {
@@ -245,14 +250,7 @@ navUlLi.map((li) => {
   li.addEventListener('click', () => {
     updateNav()
     if (navUlLi[0].classList.contains('nav-active')) {
-      let exploreBtn = document.querySelector('.main-exp a')
-      exploreBtn.addEventListener('click', () => {
-        for (const li of navUlLi) {
-          li.classList.remove('nav-active')
-        }
-        navUlLi[1].classList.add('nav-active')
-        updateNav()
-      })
+      exploreBtn()
     }
   })
 })
