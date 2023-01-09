@@ -88,7 +88,7 @@ function destinationTabsOne() {
   destinationPlanet.classList.toggle('destination_planet_animation')
   destinationTabs.classList.add('planet_animation')
   moon.classList.toggle('planet_animation')
-  // setTimeout(() => destinationTabs.classList.remove('planet_animation'), 600)
+  setTimeout(() => destinationTabs.classList.remove('planet_animation'), 600)
   setTimeout(() => moon.classList.toggle('planet_animation'), 1000)
   setTimeout(
     () => destinationPlanet.classList.toggle('destination_planet_animation'),
