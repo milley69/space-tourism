@@ -1,330 +1,240 @@
 @import 'variables'
 @import "style"
 
-
 *,*:after,*:before
   margin: 0
   box-sizing: border-box
 
-html
-  overflow-x: hidden
-  overflow-y: hidden /* scroll */
-  font-size: 16px
-
-.disabledQ
-  display: none
-
-body
-  background: url("../assets/home/background-home-desktop.jpg") no-repeat
-  background-size: cover
+html, body
   height: 100vh
   width: 100%
-
-  font-weight: 400
-  @include flexbox()
-  flex-direction: column
-header
-  padding-left: 50px
-  margin-top: 40px
-  height: 96px
-  width: 100%
-  @include flexbox
-  justify-content: space-between
-  align-items: center
+  font-family: $Bar
+  font-size: 16px
+  background: $dark
+.disable-planet
+  display: none!important
 nav
-  background: rgba(255, 255, 255, 0.04)
-  -webkit-backdrop-filter: blur(40.7742px)
-  backdrop-filter: blur(40.7742px)
-  width: 52rem
-  height: 100%
-  .nav-menu
-    display: none
-    height: 21px
-    width: 24px
-    margin-right: 50px
-    transition: .2s background ease
-    &-close
-      background: url("../assets/shared/icon-close.svg") no-repeat
-    &-open
-      background: url("../assets/shared/icon-hamburger.svg") no-repeat
-  ul
-    @include flexbox
-    height: 100%
-    width: 100%
-    padding-left: 123px
-    align-items: center
-    li
-      list-style: none
-      margin-right: 48px
-      &:last-child
-        margin-right: 0
-    .active-nav
-      position: relative
-      &:after
-        content: ''
-        position: absolute
-        bottom: -38px
-        left: 0
-        width: 100%
-        height: 3px
-        background: $white
-        z-index: 2
-        -webkit-animation: active-nav 0.6s ease-in both
-        animation: active-nav .3s ease
-      @-webkit-keyframes active-nav 
-        from
-          width: 0
-        to
-          width: 100%
-      @keyframes active-nav 
-        from
-          width: 0
-        to
-          width: 100%
-
-    li
-      a
-        text-decoration: none
-        color: $white
-        font-size: 1rem
-        font-family: $Bar
-        letter-spacing: 2.7px
-        text-transform: uppercase
-        position: relative
-        &:after
-          content: ''
-          position: absolute
-          bottom: -39.4px
-          left: 0
-          width: 100%
-          height: 0
-          background: $white
-          opacity: .5
-          transition: height .1s ease
-        &:hover:after
-          height: 3px
-        span
-          font-weight: 700
-          margin-right: 14px
-
+  @include flexbox
+  flex-direction: row
+  align-items: center
+  justify-content: space-between
+  padding: 0 0 1.5rem 1.5rem
+  width: 100%
+  position: fixed
+  z-index: 2
+  img
+    width: auto
+    height: auto
+  a
+    font-family: $Bar
+    font-style: normal
+    font-weight: 400
+    font-size: 1rem
+    line-height: 19px
+    letter-spacing: 2.7px
+    color: $white
+    text-decoration: none
 main
-  @include flexbox()
-  @include flex(1)
+  background-size: cover
+  background-position: center
+  height: 100vh
+  @include flexbox
+  flex-direction: column
   align-items: center
   justify-content: space-around
-  .home_title
-    @include flex(0)
-    
-    -webkit-animation: focus-home .8s cubic-bezier(0.550, 0.085, 0.680, 0.530) both
-    animation: focus-home .8s cubic-bezier(0.550, 0.085, 0.680, 0.530) both
-    h4
-      font-family: $Bar
-      font-size: 1.75rem
-      line-height: 34px
-      letter-spacing: 4.725px
-      color: $sky
-      text-transform: uppercase
-    h1
-      font-family: $bell
-      font-size: 9.375rem
-      line-height: 172px
-      color: #FFFFFF
-      margin: 0
-      font-weight: 400
-      text-transform: uppercase
-      margin-top: 24px
-      margin-bottom: 24px
-    p
+  padding-top: 6rem
+  .main-title
+    padding: 0 24px
+  h4
     font-family: $Bar
     font-weight: 400
-    font-size: 1.125rem
-    line-height: 32px
+    font-size: 1rem
+    line-height: 19px
+    text-align: center
+    letter-spacing: 2.7px
     color: $sky
-  .home_explore
-    -webkit-animation: focus-home .8s cubic-bezier(0.550, 0.085, 0.680, 0.530) both
-    animation: focus-home .8s cubic-bezier(0.550, 0.085, 0.680, 0.530) both
-    a
-      @include flexbox()
-      align-items: center
-      justify-content: center
-      font-family: $bell
-      font-size: 32px
-      letter-spacing: 2px
-      color: $dark
-      text-transform: uppercase
-      text-decoration: none
-      background: $white
-      height: 274px
-      width: 274px
-      border-radius: 50%
-      position: relative
-      transition: box-shadow .4s ease-in-out
-      &:hover
-        -webkit-box-shadow: 0px 0px 0px 75px rgba(255, 255, 255, 0.1)
-        -moz-box-shadow: 0px 0px 0px 75px rgba(255, 255, 255, 0.1)
-        box-shadow: 0px 0px 0px 75px rgba(255, 255, 255, 0.1)
-       
-@keyframes focus-home 
-  0% 
-    -webkit-filter: blur(12px)
-    filter: blur(12px)
-    opacity: 0
-  100% 
-    -webkit-filter: blur(0px)
-    filter: blur(0px)
-    opacity: 1
-@-webkit-keyframes text-focus-in 
-  0% 
-    -webkit-filter: blur(12px)
-    filter: blur(12px)
-    opacity: 0
-  100% 
-    -webkit-filter: blur(0px)
-    filter: blur(0px)
-    opacity: 1
-
-
-#destination
-  &::before
-    content: ''
-    background: url("../assets/destination/background-destination-desktop.jpg") no-repeat
-    background-size: cover
-    position: absolute
-    top: 0
-    left: 0
-    width: 100%
-    height: 100%
-    z-index: -1
-
-#destination
-  @include flexbox()
-  flex-direction: column
-  width: 1110px
-  height: 100%
-  margin: 70px auto 0
-  .destination_pick
-    font-family: $Bar
-    font-size: 1.75rem
-    letter-spacing: 4.725px
-    text-transform: uppercase
-    color: $white
+  h1
+    font-family: $Bell
     font-weight: 400
-    margin-bottom: 4rem
-    span
-      font-weight: 700
-      line-height: 34px
-      opacity: 0.25
-      margin-right: 28px
-  .destination_about
+    font-size: 5rem
+    line-height: 100px
+    text-align: center
+    color: $white
+    margin: 16px 0
+  p
+    font-family: $Bar
+    font-weight: 400
+    font-size: 15px
+    line-height: 25px
+    text-align: center
+    color: $sky
+
+.main-exp
+  a
     @include flexbox()
     align-items: center
-    justify-content: space-evenly
-    height: 70%
-    .destination_planet
-      text-align: right
-      img
-        width: 100%
-        height: auto
-    .destination_title
-      width: 445px 
-      .destination_tab
-        ul
-          @include flexbox
-          height: 100%
-          width: 100%
-          padding: 0
-          li
-            list-style: none
-            margin-right: 35px
-            &:last-child
-              margin-right: 0
-          .active-tab
-            position: relative
-            &:after
-              content: ''
-              position: absolute
-              bottom: -12px
-              left: 0
-              width: 100%
-              height: 3px
-              background: $white
-              z-index: 2
-              -webkit-animation: active-tab 0.6s ease-in both
-              animation: active-tab .3s ease
-            @-webkit-keyframes active-tab 
-              from
-                width: 0
-              to
-                width: 100%
-            @keyframes active-tab 
-              from
-                width: 0
-              to
-                width: 100%
+    justify-content: center
+    font-family: $Bell
+    font-size: 20px
+    letter-spacing: 1.25px
+    color: $dark
+    text-transform: uppercase
+    text-decoration: none
+    background: $white
+    width: 9.375rem
+    height: 9.375rem
+    border-radius: 50%
+    position: relative
+    transition: box-shadow .4s ease-in-out
+    z-index: 1
+    &:hover
+      -webkit-box-shadow: 0px 0px 0px 75px rgba(255, 255, 255, 0.1)
+      -moz-box-shadow: 0px 0px 0px 75px rgba(255, 255, 255, 0.1)
+      box-shadow: 0px 0px 0px 75px rgba(255, 255, 255, 0.1)
 
-          li
-            a
-              text-decoration: none
-              color: $white
-              font-size: 1rem
-              font-family: $Bar
-              font-weight: 400
-              letter-spacing: 2.7px
-              text-transform: uppercase
-              position: relative
-              &:after
-                content: ''
-                position: absolute
-                bottom: -14px
-                left: 0
-                width: 100%
-                height: 0
-                background: $white
-                opacity: .5
-                transition: height .1s ease
-              &:hover:after
-                height: 3px
-              span
-                font-weight: 700
-                margin-right: 14px
-  .planet_info
+#destination
+  background: url("../assets/destination/background-destination-mobile.jpg") no-repeat
+  background-size: cover
+  background-position: center
+  height: 100vh
+
+  @include flexbox
+  flex-direction: column
+  align-items: center
+  text-align: center
+  padding: 6rem 6.5%
+  color: $white
+  h4
+    font-weight: 400
+    font-size: 16px
+    line-height: 19px
+    letter-spacing: 2.7px
+    text-transform: uppercase
+    color: $white
+    span
+      margin-right: 18px
+      font-weight: 700
+      font-size: 1rem
+      opacity: .25
+  .destination_planet
+    margin-top: 32px
+    height: 170px
+    &[data-planet="moon"]
+      background: url("../assets/destination/image-moon.png") no-repeat
+      background-size: contain
+      background-position: center
+
+    &[data-planet="mars"]
+      background: url("../assets/destination/image-mars.png") no-repeat
+      background-size: contain
+      background-position: center
+
+    &[data-planet="europa"]
+      background: url("../assets/destination/image-europa.png") no-repeat
+      background-size: contain
+      background-position: center
+
+    &[data-planet="titan"]
+      background: url("../assets/destination/image-titan.png") no-repeat
+      background-size: contain
+      background-position: center
+
+    &_animation
+      -webkit-animation: bounce-in-top 1.1s both
+      animation: bounce-in-top 1.1s both
+
+  .destination_main
+    margin-top: 26px
+    // animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both
+  .destination_tabs
+    animation: none
+    ul
+      list-style: none
+      padding: 0
+      margin: 0
+      @include flexbox
+      justify-content: space-evenly
+      li
+        display: inline-block
+        background: none
+        height: inherit
+        font-size: 14px
+        line-height: 17px
+        letter-spacing: 2.3625px
+        text-transform: uppercase
+        color: $sky
+        position: relative
+        cursor: pointer
+        &::after
+          content: ''
+          position: absolute
+          bottom: -8px
+          left: 0
+          width: 0
+          height: 3px
+          background: rgba(255, 255, 255, .5)
+          z-index: 1
+          transition: .1s width ease
+        &:hover::after
+          width: 100%
+      .tab_active
+        color: $white
+        &::after
+          content: ''
+          position: absolute
+          bottom: -8px
+          left: 0
+          width: 100%
+          height: 3px
+          z-index: 2
+          background: #fff
+          -webkit-animation: active-nav 0.6s ease-in both
+          animation: active-nav .3s ease
+  #moon,#mars,#europa,#titan
     h1
-      font-family: $bell
-      font-size: 6.25rem
-      line-height: 115px
+      font-family: $Bell
+      font-style: normal
       font-weight: 400
-      color: $white
+      font-size: 56px
+      line-height: 64px
       text-transform: uppercase
-      margin: 37px 0 14px
+      margin-bottom: 0
     p
-      font-family: $Bar
-      font-weight: 400
-      font-size: 1.125rem
-      line-height: 2rem
+      font-size: 15px
+      line-height: 25px
       color: $sky
-      margin-bottom: 54px
+      padding: 0 4%
     hr
       border: 1px solid #383B4B
+      margin: 32px 0
     table
-      margin-top: 28px
+      font-size: 14px
+      line-height: 17px
+      text-align: center
+      letter-spacing: 2.3625px
+      text-transform: uppercase
+      color: $sky
+      margin: 0 auto
+      tr
+        @include flexbox
+        flex-direction: column
+        align-items: center
       th
-        text-transform: uppercase
-        font-weight: 400
-        font-family: $Bar
-        font-size: 14px
-        letter-spacing: 2.3625px
-        color: $sky
-        text-align: left
-        padding: 0
-        padding-bottom: 12px
+        margin-bottom: 12px
       td
-        text-transform: uppercase
-        font-weight: 400
-        font-family: $bell
+        font-family: $Bell
         font-size: 28px
-        line-height: 2rem
+        line-height: 32px
+        text-transform: uppercase
         color: $white
-        &:first-child
-          padding-right: 70px
-
-
+        margin-bottom: 32px
+  .planet_animation
+    // animation: text-focus-in .6s cubic-bezier(0.550, 0.085, 0.680, 0.530) both
+    h1
+      animation: text-focus-in .7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both
+    p,hr
+      animation: text-focus-in .8s cubic-bezier(0.550, 0.085, 0.680, 0.530) both
+    th
+      animation: text-focus-in .9s cubic-bezier(0.550, 0.085, 0.680, 0.530) both
+    td
+      animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both

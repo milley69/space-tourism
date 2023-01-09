@@ -1,180 +1,266 @@
+@import 'variables'
+@import 'keyframe'
+// @import "style"
 @import "mixin/flex"
-@media screen and (min-width: 769px)
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px)
   nav
-    position: relative
-    &:before
-      content: ''
-      position: absolute
-      width: calc(50vw - 50%)
-      height: 1px
-      left: calc(-50vw - -55%)
-      top: 48px
-      background: #FFFFFF
-      mix-blend-mode: normal
-      opacity: 0.25
-      z-index: 5
-@media screen and (max-width: 1000px)
-  nav
-    width: 40rem
-    ul
-      padding-left: 60px
-@media screen and (max-width: 768px)
-  body
-    background: url("../assets/home/background-home-tablet.jpg") no-repeat
-    background-size: cover
-  header
-    margin-top: 0
-  nav
-    width: 28rem
-    ul
-      padding-left: 48px
-      li
-        margin-right: 37px
-        a
-          font-size: 0.9rem
-          line-height: 17px
-          letter-spacing: 2.3625px
-          span
-            display: none
-  main
-    flex-direction: column
-    .home_title
-      max-width: min-content
-      text-align: center
-      h4
-        font-size: 1.25rem
-        line-height: 24px
-        letter-spacing: 3.375px
-      h1
-        line-height: 9.375rem
-      p
-        line-height: 1.75rem
-        font-size: 1rem
-  #destination
-    &::before
-      background: url("../assets/destination/background-destination-tablet.jpg") no-repeat
-@media screen and (max-width: 444px) 
-  main
-    .home_title
-      h4
-        font-size: 1.25rem
-        line-height: 24px
-        letter-spacing: 3.375px
-      h1
-        font-size: 7.375rem
-      p
-        line-height: 1.75rem
-        font-size: 1rem
-
-@media screen and (max-width: 556px)
-  nav
-    background: none
-    -webkit-backdrop-filter: none
-    backdrop-filter: none
-    width: 254px
-    @include flexbox()
-    justify-content: flex-end
-    align-items: center
-    position: relative
+    padding: 1.5rem
     .nav-menu
-      z-index: 10
-      display: block
-    .active-nav
-      &:after
-        display: none
-    ul
-      background: rgba(255, 255, 255, 0.04)
-      -webkit-backdrop-filter: blur(40.7742px)
-      backdrop-filter: blur(40.7742px)
-      position: absolute
-      height: 100vh
-      padding-left: 32px
-      padding-top: 118px
-      top: 0
-      right: 0
-      //right: -300px
+      width: 1.5rem
+      height: 1.5rem
+      z-index: 5
+      transition: .2s ease
+      &-open
+        background: url("../assets/shared/icon-hamburger.svg") no-repeat
+      &-close
+        background: url("../assets/shared/icon-close.svg") no-repeat
+
+    .nav-close
       display: none
+    .nav-list
+      display: none
+    .nav-open
+      @include flexbox
+      position: absolute
       flex-direction: column
-      align-items: flex-start
-      transform: translateX(0)
+      list-style: none
+      right: 0
+      top: 0
+      height: 100vh
+      background: rgba(225,225,225,0.04)
+      backdrop-filter: blur(40.7742px)
+      padding: 118px 0 0 32px
       -webkit-animation: nav-open 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
       animation: nav-open 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
-      z-index: 1
-      &.nav-open
-        //right: -100px
-        display: inherit
-      &.nav-open-fade
+      &-fade
         -webkit-animation: nav-open-fade 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
         animation: nav-open-fade 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
-      li
-        margin-right: 0
-        margin-bottom: 32px
-        a
-          &:after
-            display: none
-          span
-            display: inline
-  @-webkit-keyframes nav-open
-    0%
-      -webkit-transform: translateX(300px)
-      transform: translateX(300px)
 
-    100%
-      -webkit-transform: translateX(0)
-      transform: translateX(0)
-
-
-  @keyframes nav-open
-    0%
-      -webkit-transform: translateX(300px)
-      transform: translateX(300px)
-
-    100%
-      -webkit-transform: translateX(0)
-      transform: translateX(0)
-
-  @-webkit-keyframes nav-open-fade
-    0%
-      -webkit-transform: translateX(0)
-      transform: translateX(0)
-
-    100%
-      -webkit-transform: translateX(300px)
-      transform: translateX(300px)
-
-
-  @keyframes nav-open-fade
-    0%
-      -webkit-transform: translateX(0)
-      transform: translateX(0)
-
-    100%
-      -webkit-transform: translateX(300px)
-      transform: translateX(300px)
-
-
-@media screen and (max-width: 375px)
-  body
-    background: url("../assets/home/background-home-mobile.jpg") no-repeat
-    background-size: cover
-  header
-    padding-left: 24px
-  main
-    .home_title
-      max-width: none
-      h4
+    li
+      margin-bottom: 32px
+      a
+        font-family: $Bar
+        font-style: normal
+        font-weight: 400
         font-size: 1rem
         line-height: 19px
         letter-spacing: 2.7px
+        color: $white
+        text-decoration: none
+        span
+          font-weight: 700
+          margin-right: 12px
+  main
+    background: url("../assets/home/background-home-mobile.jpg") no-repeat
+    background-size: cover
+    background-position: center
+    height: 100vh
+    @include flexbox
+    flex-direction: column
+    align-items: center
+    justify-content: space-around
+    padding-top: 6rem
+    .main-title
+      padding: 0 24px
+      h4
+        font-family: $Bar
+        font-weight: 400
+        font-size: 1rem
+        line-height: 19px
+        text-align: center
+        letter-spacing: 2.7px
+        color: $sky
       h1
+        font-family: $Bell
+        font-weight: 400
         font-size: 5rem
-        line-height: 6.25rem
-        margin-top: 16px
-        margin-bottom: 16px
+        line-height: 100px
+        text-align: center
+        color: $white
+        margin: 16px 0
       p
-        line-height: 1.5625rem
-        font-size: .9375rem
-        padding: 0 24px
-  #destination
+        font-family: $Bar
+        font-weight: 400
+        font-size: 15px
+        line-height: 25px
+        text-align: center
+        color: $sky
+
+  .main-exp
+    a
+      @include flexbox()
+      align-items: center
+      justify-content: center
+      font-family: $Bell
+      font-size: 20px
+      letter-spacing: 1.25px
+      color: $dark
+      text-transform: uppercase
+      text-decoration: none
+      background: $white
+      width: 9.375rem
+      height: 9.375rem
+      border-radius: 50%
+      position: relative
+      transition: box-shadow .4s ease-in-out
+      z-index: 1
+      &:hover
+        -webkit-box-shadow: 0px 0px 0px 75px rgba(255, 255, 255, 0.1)
+        -moz-box-shadow: 0px 0px 0px 75px rgba(255, 255, 255, 0.1)
+        box-shadow: 0px 0px 0px 75px rgba(255, 255, 255, 0.1)
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 601px)
+  body
+    background: $dark
+  main
+    background: url("../assets/home/background-home-tablet.jpg") no-repeat
+    background-size: cover
+    background-position: center
+  .nav-menu
+    display: none
+  nav
+    .nav-list
+      @include flexbox
+      flex-direction: row
+      list-style: none
+      height: 6rem
+      padding-right: 13%
+      background: rgba(225,225,225,0.04)
+      backdrop-filter: blur(40.7742px)
+      align-items: center
+      justify-content: flex-start
+    .nav-active
+      position: relative
+      &::after
+        content: ''
+        position: absolute
+        bottom: -37px
+        left: 0
+        width: 100%
+        height: 3px
+        background: #fff
+        -webkit-animation: active-nav 0.6s ease-in both
+        animation: active-nav .3s ease
+
+    li
+      a
+        position: relative
+        &::after
+          content: ''
+          position: absolute
+          bottom: -37px
+          left: 0
+          width: 0
+          height: 3px
+          background: #fff
+          opacity: .5
+          transition: .1s width ease
+        &:hover::after
+          width: 100%
+        span
+          display: none
+    li
+      margin-right: 32px
+      &:last-child
+        margin-right: 0
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px)
+  body
+    background: $dark
+  main
+    .main-title
+      width: 450px
+      padding: 0
+    h4
+      font-size: 20px
+      line-height: 24px
+      letter-spacing: 3.375px
+    h1
+      font-size: 150px
+      line-height: 150px
+    p
+      font-size: 16px
+      line-height: 28px
+    .main-exp a
+      width: 242px
+      height: 242px
+      font-size: 32px
+      line-height: 37px
+      letter-spacing: 2px
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px)
+  .nav-list
     &::before
-      background: url("../assets/destination/background-destination-mobile.jpg") no-repeat
+      content: ''
+      position: absolute
+      width: calc((50vw - 50%) * 1.01)
+      left: calc(-50vw + 51%)
+      height: 1px
+      top: 48px
+      background: #fff
+      mix-blend-mode: normal
+      opacity: 0.25
+      z-index: 5
+  main
+    .main-title
+      width: 535px
+      padding: 0
+      h4
+        font-size: 2rem
+        line-height: 24px
+        letter-spacing: 3.375px
+      h1
+        font-size: 180px
+        line-height: 180px
+      p
+        font-size: 24px
+        line-height: 28px
+    .main-exp a
+      width: 270px
+      height: 270px
+      font-size: 40px
+      line-height: 37px
+      letter-spacing: 2px
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px)
+  nav
+    padding: 2.5rem 0 1.5rem 3.4375rem
+    li a span
+      margin-right: 11px
+      display: inline-block
+  main
+    background: url("../assets/home/background-home-desktop.jpg") no-repeat
+    background-size: cover
+    background-position: center
+
+    padding-bottom: 10%
+    flex-direction: row
+    align-items: flex-end
+    .main-title
+      h4
+        font-size: 28px
+        line-height: 34px
+        letter-spacing: 4.725px
+      h1
+        font-size: 150px
+        line-height: 172px
+      p
+        font-size: 18px
+        line-height: 32px
+/* Extra small devices (phones, 600px and down) */
+// #destination
+@media only screen and (max-width: 600px)
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px)
+/* Medium devices (landscape tablets, 768px and up) */
+
+@media only screen and (min-width: 768px)
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px)
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px)
+
+@media only screen and (min-width: 1200px)
