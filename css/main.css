@@ -661,6 +661,27 @@ main p {
 		color: #fff;
 		margin-bottom: 32px;
 }
+#destination #moon .destination_table, #destination #mars .destination_table, #destination #europa .destination_table, #destination #titan .destination_table {
+		font-size: 14px;
+		line-height: 17px;
+		text-align: center;
+		letter-spacing: 2.3625px;
+		text-transform: uppercase;
+		color: #d0d6f9;
+		margin: 0 auto;
+}
+#destination #moon .destination_table .info p, #destination #mars .destination_table .info p, #destination #europa .destination_table .info p, #destination #titan .destination_table .info p {
+		margin-bottom: 12px;
+}
+#destination #moon .destination_table .info h5, #destination #mars .destination_table .info h5, #destination #europa .destination_table .info h5, #destination #titan .destination_table .info h5 {
+		font-family: "Bellefair", serif;
+		font-weight: 400;
+		font-size: 28px;
+		line-height: 32px;
+		text-transform: uppercase;
+		color: #fff;
+		margin-bottom: 32px;
+}
 #destination .planet_animation {
 		-webkit-animation: text-focus-in 0.6s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 		        animation: text-focus-in 0.6s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
@@ -673,11 +694,7 @@ main p {
 		-webkit-animation: text-focus-in 0.8s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 		        animation: text-focus-in 0.8s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
-#destination .planet_animation th {
+#destination .planet_animation .destination_table {
 		-webkit-animation: text-focus-in 0.9s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 		        animation: text-focus-in 0.9s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-}
-#destination .planet_animation td {
-		-webkit-animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-		        animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }/*# sourceMappingURL=main.css.map */

@@ -443,6 +443,144 @@
 }
 /* Extra small devices (phones, 600px and down) */
 /* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 601px) {
+		#destination {
+				padding: 8.5rem 12.7% 0;
+				background: url("../assets/destination/background-destination-tablet.jpg") no-repeat;
+				background-size: cover;
+				background-position: center;
+				align-items: flex-start;
+		}
+		#destination h4 {
+				font-size: 20px;
+				line-height: 24px;
+				letter-spacing: 3.375px;
+				transform: translateX(-15%);
+		}
+		#destination h4 span {
+				font-size: 20px;
+		}
+		#destination .destination_planet {
+				height: 300px;
+				margin-top: 60px;
+		}
+		#destination .destination_main {
+				margin-top: 50px;
+		}
+		#destination .destination_tabs ul {
+				padding: 0 17%;
+		}
+		#destination .destination_tabs ul li {
+				font-size: 16px;
+				line-height: 19px;
+				letter-spacing: 2.7px;
+		}
+		#destination #moon h1, #destination #mars h1, #destination #europa h1, #destination #titan h1 {
+				font-size: 80px;
+				line-height: 92px;
+		}
+		#destination #moon p, #destination #mars p, #destination #europa p, #destination #titan p {
+				font-size: 1rem;
+				line-height: 28px;
+		}
+		#destination #moon .destination_table, #destination #mars .destination_table, #destination #europa .destination_table, #destination #titan .destination_table {
+				display: flex;
+				justify-content: space-evenly;
+		}
+		#destination #moon .info p, #destination #mars .info p, #destination #europa .info p, #destination #titan .info p {
+				margin-bottom: 12px;
+				padding: 0;
+		}
+		#destination #moon .info h5, #destination #mars .info h5, #destination #europa .info h5, #destination #titan .info h5 {
+				font-weight: 400;
+				font-size: 28px;
+				line-height: 32px;
+				text-transform: uppercase;
+				color: #fff;
+				margin-bottom: 32px;
+				padding: 0;
+		}
+}
 /* Medium devices (landscape tablets, 768px and up) */
 /* Large devices (laptops/desktops, 992px and up) */
-/* Extra large devices (large laptops and desktops, 1200px and up) *//*# sourceMappingURL=main-media.css.map */
+@media only screen and (min-width: 992px) {
+		nav {
+				padding: 40px 0 1.5rem 3.4375rem;
+		}
+		#destination {
+				background: url("../assets/destination/background-destination-desktop.jpg") no-repeat;
+				background-size: cover;
+				background-position: center;
+				padding: 13.25rem 3% 0;
+		}
+		#destination h4 {
+				transform: translateX(15%);
+		}
+		#destination .destination_planets {
+				display: flex;
+				align-items: center;
+				-moz-column-gap: 30px;
+				     column-gap: 30px;
+		}
+		#destination .destination_planet {
+				width: 445px;
+				height: 445px;
+				flex: 0 50%;
+		}
+		#destination .destination_main {
+				flex: 0 50%;
+		}
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+		#destination {
+				text-align: left;
+		}
+		#destination h4 {
+				font-size: 28px;
+				line-height: 34px;
+				letter-spacing: 4.725px;
+		}
+		#destination h4 span {
+				font-size: 28px;
+				line-height: 34px;
+				letter-spacing: 4.725px;
+				margin-right: 28px;
+		}
+		#destination .destination_planets {
+				display: flex;
+				justify-content: space-around;
+				-moz-column-gap: 0;
+				     column-gap: 0;
+				align-items: flex-start;
+		}
+		#destination .destination_planet {
+				flex: 0 445px;
+		}
+		#destination .destination_main {
+				flex: 0 445px;
+		}
+		#destination .destination_tabs ul {
+				justify-content: flex-start;
+				padding: 0;
+		}
+		#destination .destination_tabs ul li {
+				margin-right: 35px;
+		}
+		#destination #moon h1, #destination #mars h1, #destination #europa h1, #destination #titan h1 {
+				font-size: 100px;
+				line-height: 115px;
+		}
+		#destination #moon p, #destination #mars p, #destination #europa p, #destination #titan p {
+				font-size: 18px;
+				line-height: 32px;
+				padding: 0;
+		}
+		#destination #moon .destination_table, #destination #mars .destination_table, #destination #europa .destination_table, #destination #titan .destination_table {
+				justify-content: flex-start;
+				text-align: left;
+		}
+		#destination #moon .destination_table .info:first-child, #destination #mars .destination_table .info:first-child, #destination #europa .destination_table .info:first-child, #destination #titan .destination_table .info:first-child {
+				margin-right: 80px;
+		}
+}/*# sourceMappingURL=main-media.css.map */

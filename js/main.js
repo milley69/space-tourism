@@ -162,15 +162,16 @@ let destination = `
               and Apollo 11 landing sites.
             </p>
             <hr />
-            <table>
-              <caption></caption>
-              <tb>
-                <th>avg. distance</th>
-                <td>384,400 km</td>
-                <th>Est. travel time</th>
-                <td>3 days</td>
-              </tb>
-            </table>
+            <div class="destination_table">
+              <div class="info">
+                <p>AVG. DISTANCE</p>
+                <h5>384,400 KM</h5>
+              </div>
+              <div class="info">
+                <p>Est. travel time</p>
+                <h5>3 DAYS</h5>
+              </div>
+            </div>
           </div>
           <div id="mars" class="disable-planet">
             <h1>mars</h1>
@@ -180,15 +181,16 @@ let destination = `
               It’s two and a half times the size of Everest!
             </p>
             <hr />
-            <table>
-              <caption></caption>
-              <tb>
-                <th>avg. distance</th>
-                <td>225 MIL. km</td>
-                <th>Est. travel time</th>
-                <td>9 months</td>
-              </tb>
-            </table>
+            <div class="destination_table">
+              <div class="info">
+                <p>AVG. DISTANCE</p>
+                <h5>225 MIL. km</h5>
+              </div>
+              <div class="info">
+                <p>Est. travel time</p>
+                <h5>9 months</h5>
+              </div>
+            </div>
           </div>
           <div id="europa" class="disable-planet">
             <h1>europa</h1>
@@ -199,15 +201,16 @@ let destination = `
               snug wintery cabin.
             </p>
             <hr />
-            <table>
-              <caption></caption>
-              <tb>
-                <th>avg. distance</th>
-                <td>628 MIL. km</td>
-                <th>Est. travel time</th>
-                <td>3 years</td>
-              </tb>
-            </table>
+            <div class="destination_table">
+              <div class="info">
+                <p>AVG. DISTANCE</p>
+                <h5>628 MIL. km</h5>
+              </div>
+              <div class="info">
+                <p>Est. travel time</p>
+                <h5>3 years</h5>
+              </div>
+            </div>
           </div>
           <div id="titan" class="disable-planet">
             <h1>titan</h1>
@@ -218,19 +221,21 @@ let destination = `
               Saturn.
             </p>
             <hr />
-            <table>
-              <caption></caption>
-              <tb>
-                <th>avg. distance</th>
-                <td>1.6 BIL. km</td>
-                <th>Est. travel time</th>
-                <td>7 years</td>
-              </tb>
-            </table>
+            <div class="destination_table">
+              <div class="info">
+                <p>AVG. DISTANCE</p>
+                <h5>1.6 BIL. km</h5>
+              </div>
+              <div class="info">
+                <p>Est. travel time</p>
+                <h5>7 years</h5>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </section>`
+    </section>
+    `
 let crew = `<section id="crew"><h1>crew</h1></section>`
 let technology = `<section id="technology"><h1>technology</h1></section>`
 

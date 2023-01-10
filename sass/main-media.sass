@@ -254,13 +254,118 @@
 @media only screen and (max-width: 600px)
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px)
-/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 601px)
+  #destination
+    padding: 8.5rem 12.7% 0
+    background: url("../assets/destination/background-destination-tablet.jpg") no-repeat
+    background-size: cover
+    background-position: center
+    align-items: flex-start
+    h4
+      font-size: 20px
+      line-height: 24px
+      letter-spacing: 3.375px
+      transform: translateX(-15%)
+      span
+        font-size: 20px
+    .destination_planet
+      height: 300px
+      margin-top: 60px
+    .destination_main
+      margin-top: 50px
+    .destination_tabs
+      ul
+        padding: 0 17%
+        li
+          font-size: 16px
+          line-height: 19px
+          letter-spacing: 2.7px
 
+    #moon,#mars,#europa,#titan
+      h1
+        font-size: 80px
+        line-height: 92px
+      p
+        font-size: 1rem
+        line-height: 28px
+      .destination_table
+        @include flexbox
+        justify-content: space-evenly
+      .info
+        p
+          margin-bottom: 12px
+          padding: 0
+        h5
+          font-weight: 400
+          font-size: 28px
+          line-height: 32px
+          text-transform: uppercase
+          color: $white
+          margin-bottom: 32px
+          padding: 0
+/* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px)
+
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px)
+  nav
+    padding: 40px 0 1.5rem 3.4375rem
+  #destination
+    background: url("../assets/destination/background-destination-desktop.jpg") no-repeat
+    background-size: cover
+    background-position: center
+    padding: 13.25rem 3% 0
+    h4
+      transform: translateX(15%)
+    .destination_planets
+      @include flexbox
+      align-items: center
+      column-gap: 30px
+    .destination_planet
+      width: 445px
+      height: 445px
+      @include flex(0 50%)
+    .destination_main
+      @include flex(0 50%)
+
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px)
-
-@media only screen and (min-width: 1200px)
+  #destination
+    text-align: left
+    h4
+      font-size: 28px
+      line-height: 34px
+      letter-spacing: 4.725px
+      span
+        font-size: 28px
+        line-height: 34px
+        letter-spacing: 4.725px
+        margin-right: 28px
+    .destination_planets
+      display: flex
+      justify-content: space-around
+      column-gap: 0
+      align-items: flex-start
+    .destination_planet
+      @include flex(0 445px)
+    .destination_main
+      @include flex(0 445px)
+    .destination_tabs
+      ul
+        justify-content: flex-start
+        padding: 0
+        li
+          margin-right: 35px
+    #moon,#mars,#europa,#titan
+      h1
+        font-size: 100px
+        line-height: 115px
+      p
+        font-size: 18px
+        line-height: 32px
+        padding: 0
+      .destination_table
+        justify-content: flex-start
+        text-align: left
+        .info:first-child
+          margin-right: 80px
